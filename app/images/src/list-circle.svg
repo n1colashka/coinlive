@@ -1,0 +1,20 @@
+<svg id="Круг" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #6c87f0;
+      }
+
+      .cls-2 {
+        opacity: 0.3;
+      }
+
+      .cls-3 {
+        opacity: 0.1;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="15" cy="15" r="5"/>
+  <circle id="Ellipse_2559_copy" data-name="Ellipse 2559 copy" class="cls-2" cx="15" cy="15" r="10"/>
+  <circle id="Ellipse_2559_copy_2" data-name="Ellipse 2559 copy 2" class="cls-3" cx="15" cy="15" r="15"/>
+</svg>

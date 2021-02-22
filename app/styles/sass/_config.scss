@@ -1,0 +1,142 @@
+
+// USER VARIABLES SECTION
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$celias: 'Celias', sans-serif;
+$celias-black: 'Celias-Black', sans-serif;
+$dsdigital: 'DsDigital', sans-serif;
+// FONTS
+
+@font-face {
+    font-family: 'Celias';
+	src: local("Celias");
+    src: 
+        url('../fonts/Celias.woff2') format('woff2'),
+        url('../fonts/Celias.woff') format('woff'),
+        url('../fonts/Celias.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Celias-Black';
+	src: local("Celias-Black"), local("Celias Black");
+    src: 
+        url('../fonts/Celias-Black.woff2') format('woff2'),
+        url('../fonts/Celias-Black.woff') format('woff'),
+        url('../fonts/Celias-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DsDigital';
+	src: local("DsDigital"), local("Ds Digital"), local("Ds-Digital");
+    src: 
+        url('../fonts/DsDigital.woff2') format('woff2'),
+        url('../fonts/DsDigital.woff') format('woff'),
+        url('../fonts/DsDigital.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// GENERAL DOCUMENT STYLES
+
+input, textarea {
+	outline: transparent;
+}
+
+html {
+	box-sizing: border-box;
+    height: 100%;
+}
+
+html, body { 
+	overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.title {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+ul,  li {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+// Input number fix
+
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none
+}
+
+button {
+	outline: transparent;
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+.container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+.overflow-hidden {
+	overflow: hidden;
+
+	body {
+		overflow: hidden
+	} 
+}
