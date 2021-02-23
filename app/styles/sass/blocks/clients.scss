@@ -3,9 +3,6 @@
     padding-bottom: 65px;
     background-color: #f5f5f5;
 
-    &__inner {
-    }
-
     &__head {
         display: flex;
         align-items: center;
@@ -47,13 +44,15 @@
 
     &__slider {
         max-width: 940px;
-        height: 280px;
         margin: 0 auto;
         padding: 25px;
+        padding-bottom: 40px;
     }
 
     &__item {
+        border-radius: 10px;
         background-color: #fafafa;
+        height: auto;
     }
 
     &__item-inner {
@@ -63,6 +62,7 @@
         box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
         background-color: #fafafa;
         padding: 25px 30px;
+        height: 92%;
     }
 
     &__info {
@@ -75,6 +75,7 @@
 
         img {
             border-radius: 50%;
+            width: 129px;
         }
     }
 
