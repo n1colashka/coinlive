@@ -1,199 +1,113 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    function initTogglePassword() {
-        const passwordToggleBtn = document.querySelector('.password-eye');
-        function togglePassword() {
-            var x = document.querySelector(".form__password");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
-        passwordToggleBtn.addEventListener('click', togglePassword);
-    }
-    
-    initTogglePassword();
 
     function initMenu() {
         const menuBtn = document.querySelector('.header__menu-btn');
-        const menu = document.querySelector('.header__inner');
+        const menu = document.querySelector('.header__navigation');
         const navigationLinks = document.querySelectorAll('.header__navigation li a');
         const html = document.querySelector('html');
-        menuBtn.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            menuBtn.classList.toggle('active');
-            html.classList.toggle('overflow-hidden');
-        })
-        if (document.documentElement.clientWidth < 1025) {
-            navigationLinks.forEach(item => {
-            item.addEventListener('click', () => {
-                menu.classList.remove('active');
-                menuBtn.classList.remove('active');
-                html.classList.remove('overflow-hidden');
+        
+        if (document.documentElement.clientWidth <= 750) {
+            menuBtn.addEventListener('click', function() {
+                menu.classList.toggle('active');
+                menuBtn.classList.toggle('active');
+                html.classList.toggle('overflow-hidden');
             })
-        })
+
+            const menuLists = document.querySelectorAll('.menu__list a');
+            menuLists.forEach(list => {
+                list.addEventListener('click', function() {
+                    if (list.parentElement.classList.contains('menu__list')) {
+                        if (list.parentElement.classList.contains('open')) {
+                            list.parentElement.classList.remove('open');
+                        } else {
+                            list.parentElement.classList.add('open');
+                        }
+                    }
+                })
+            })
         }
     }
 
-    function initHeroSlider() {
-        var swiper = new Swiper('.hero__slider', {
-            loop: true,
-            allowTouchMove: false,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    }
-
-    function initGamesSlider() {
-        var swiper = new Swiper('.games__slider', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            allowTouchMove: false,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                },
-                480: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                
-            }
-        });
-    }
-
-    function initPartnersSlider() {
-        var swiper = new Swiper('.partners__slider', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            allowTouchMove: false,
-            navigation: {
-                nextEl: '.partners__next',
-                prevEl: '.partners__prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                },
-                480: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                
-            }
-        });
-    }
-
-    function initProvidersSlider() {
-        var swiper = new Swiper('.providers__slider', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            allowTouchMove: false,
-            navigation: {
-                nextEl: '.providers__next',
-                prevEl: '.providers__prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                },
-                600: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                1024: {
-                    slidesPerView: 4,
-                },
-                
-            }
-        });
-    }
-    
-    function initModals() {
-        document.querySelectorAll('[data-micromodal-trigger]').forEach(function(item){
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                document.querySelector('.header__inner').classList.remove('active');
-                document.querySelector('.header__menu-btn').classList.remove('active');
-                document.querySelector('html').classList.remove('overflow-hidden');
+    function initMenu750() {
+        if (document.documentElement.clientWidth <= 1024 && document.documentElement.clientWidth > 750) {
+            $('.menu__list').on('click', function() {
+                $(this).addClass('open');
             })
-        })
-        document.querySelector('.modal__registration').addEventListener('click', function() {
-            MicroModal.close('modal-2');
-            MicroModal.show('modal-1');
-            document.querySelector('html').classList.add('overflow-hidden');
-        })
-        document.querySelector('.modal__sign').addEventListener('click', function() {
-            MicroModal.close('modal-1');
-            MicroModal.show('modal-2');
-            document.querySelector('html').classList.add('overflow-hidden');
-        })
-
-        MicroModal.init({
-            onShow: modal => document.querySelector('html').classList.add('overflow-hidden'), // [1]
-            onClose: modal => document.querySelector('html').classList.remove('overflow-hidden'), // [2]
-        });
+            $('body').on('click', function(e) {
+                if (e.target.closest('.menu__list')) {
+                    $(e.target.closest('.menu__list')).addClass('open');
+                } else {
+                    $('.menu__list').removeClass('open');
+                }
+            })
+        }
+        
     }
 
-    function initScrollToBlock() {
-        document.querySelectorAll('a[href^="#"').forEach(link => {
-
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                let href = this.getAttribute('href').substring(1);
-        
-                const scrollTarget = document.getElementById(href);
-                const topOffset = 100;
-                const elementPosition = scrollTarget.getBoundingClientRect().top;
-                const offsetPosition = elementPosition - topOffset;
-        
-                window.scrollBy({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+    function initClientsSlider() {
+        if (document.querySelector('.clients__slider')) {
+            var swiper = new Swiper('.clients__slider', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    clickable: true,
+                },
+                spaceBetween: 35
             });
-        });
+        }
+    }
+
+    function changeHeader() {
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset >= 90) {
+                header.classList.add('fixed');
+            } else {
+                header.classList.remove('fixed');
+            }
+        })
+
+    }
+
+    function showCreditsItems() {
+        if ($('.credits__item').length > 0) {
+            $(".credits__item").hide();
+            $(".credits__item").each(function(index){
+                $(this).delay(index*500).fadeIn(1000);
+            });
+        }
+    }
+
+    function showMore() {
+        if ($('.about__btn').length > 0) {
+            $('.about__btn').on('click', function(e){
+                e.preventDefault();
+                $('.about__btn').hide(500);
+                $('.about__text').addClass('open');
+            })
+        }
+    }
+
+    function initAnswersAccordion() {
+        const answers = document.querySelectorAll('.answers__item');
+        if (answers.length > 0) {
+            $('.answers__item-title').on('click', function (){
+                $(this).parent('.answers__item').toggleClass('active');
+            })
+        }
     }
     
     initMenu();
-    initHeroSlider();
-    initGamesSlider();
-    initPartnersSlider();
-    initProvidersSlider();
-    initModals();
-    initScrollToBlock();
+    initClientsSlider();
+    changeHeader();
+    showCreditsItems();
+    showMore();
+    initAnswersAccordion();
+    initMenu750();
 })

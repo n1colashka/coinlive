@@ -1,0 +1,124 @@
+.clients {
+    padding-top: 60px;
+    padding-bottom: 65px;
+    background-color: #f5f5f5;
+
+    &__inner {
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        color: #2d2e39;
+    }
+
+    &__stats {
+        display: flex;
+    }
+
+    &__stats-item {
+        margin-left: 40px;
+        max-width: 230px;
+        line-height: 1.2;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+
+        span {
+            display: block;
+            font-weight: 300;
+        }
+
+        b {
+            display: block;
+            color: #fc7478;
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__slider {
+        max-width: 940px;
+        height: 280px;
+        margin: 0 auto;
+        padding: 25px;
+    }
+
+    &__item {
+        background-color: #fafafa;
+    }
+
+    &__item-inner {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+        background-color: #fafafa;
+        padding: 25px 30px;
+    }
+
+    &__info {
+        max-width: 160px;
+        flex-shrink: 0;
+    }
+
+    &__img {
+        margin-bottom: 12px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+
+        li + li {
+            margin-left: 3px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        margin-left: 40px;
+        line-height: 25px;
+        opacity: .8;
+        padding-right: 35px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: #4424d0;
+            right: 0;
+            top: 50px;
+            height: 80px;
+            width: 1px;
+        }
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 56px;
+        display: inline-block;
+        width: auto;
+        right: 40px;
+        bottom: auto;
+        transform: rotate(90deg);
+        left: auto;
+        opacity: .5;
+    }
+}

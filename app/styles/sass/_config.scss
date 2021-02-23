@@ -73,6 +73,7 @@ body {
 .title {
     font-size: 30px;
     line-height: 1.2;
+    font-weight: 700;
 }
 
 .subtitle {
@@ -80,6 +81,25 @@ body {
     line-height: 1.2;
     margin-bottom: 10px;
     opacity: 0.5;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 10px 23px;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #4424d0;
+    border-radius: 5px;
+    color: #fff;
+
+    &--yellow {
+        background-color: #fec70d;
+        color: #000;
+        padding: 15px 23px;
+    }
 }
 
 ul,  li {
@@ -93,6 +113,7 @@ ul li {
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
+    font-weight: normal;
 }
 
 // Input number fix
@@ -139,4 +160,24 @@ a {
 	body {
 		overflow: hidden
 	} 
+}
+
+.swiper-button-next, .swiper-button-prev {
+    background: url('../images/dist/arrow-right.png') center no-repeat;
+    outline: none;
+    left: auto;
+    top: auto;
+    bottom: 25px;
+    &::after {
+        content: none;
+    }
+}
+
+.swiper-button-next {
+    right: 55px;
+}
+
+.swiper-button-prev {
+    transform: rotate(180deg);
+    right: 110px;
 }

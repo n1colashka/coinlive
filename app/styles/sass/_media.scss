@@ -1,10 +1,121 @@
 @media (min-width: 1025px) {
    // Hover section
-    
+
+   .header__navigation li {
+      &:hover {
+         & > ul {
+            display: block;
+         }
+      }
+
+      li li:hover {
+         background-color: #f0f0f0;
+         color: #2968af;
+      }
+
+      ul > li {
+         &:hover {
+            opacity: 1;
+         }
+      }
+
+   }
    // Hover section
-    
 }
 
 
 @media (max-width: 1024px) {
+   .header {
+      top: 15px;
+      &__navigation {
+         font-size: 15px;
+         line-height: 1.2;
+      }
+      &__logo img {
+         width: 140px;
+      }
+   }
+
+   .footer {
+      &__logo img {
+         width: 140px;
+      }
+   }
+}
+
+@media (max-width: 750px) {
+   .header {
+      &__menu-btn {
+         display: block;
+         position: relative;
+         z-index: 22;
+
+         &.active {
+            span {
+               margin-bottom: -2px;
+               &:nth-child(2) {
+                  opacity: 0;
+               }
+               &:nth-child(1) {
+                  transform: rotate(45deg);
+               }
+               &:nth-child(3) {
+                  transform: rotate(-45deg);
+               }
+            }
+         }
+      }
+      &__navigation {
+         position: absolute;
+         left: 0;
+         top: -15px;
+         overflow: auto;
+         z-index: 15;
+         width: 100%;
+         height: 100vh;
+         background-color: #6950d9;
+         background-image: linear-gradient(0deg,#6950d9 0,#684fd9 100%);
+         padding-top: 80px;
+         transform: translateX(-200%);
+         transition: .3s ease-in-out;
+
+         li {
+            width: 100%;
+            font-size: 20px;
+            line-height: 24px;
+         }
+
+         li a {
+            padding: 15px;
+         }
+
+         li + li {
+            margin-left: 0;
+         }
+         
+         & > ul {
+            flex-direction: column;
+         }
+      }
+      .header__navigation {
+         li {
+            border: none;
+         }
+         li ul {
+            position: static;
+            width: 100%;
+            background-color: transparent;
+            border-radius: 0;
+            color: #fff;
+         }
+      }
+   }
+
+   .menu .menu__list .menu__list a::after, .menu .menu__list .menu__list a::before {
+      background-color: #fff;
+   }
+
+   .menu .menu__list>a {
+      display: inline-block;
+   }
 }

@@ -1,0 +1,67 @@
+.answers {
+    padding-top: 55px;
+    padding-bottom: 50px;
+    background: url('../images/dist/bg-el-1.png') top left -40px no-repeat;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        margin-left: 55px;
+        max-width: 622px;
+        width: 100%;
+    }
+
+    &__item {
+        border-radius: 7px;
+        background-color: #fff;
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.13);
+        margin-bottom: 15px;
+        padding-right: 30px;
+        cursor: pointer;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.active {
+            .answers__item-title svg {
+                transform: rotate(180deg);
+
+                path {
+                    fill: #4392ff;
+                }
+            }
+            .answers__item-content {
+                display: block;
+            }
+        }
+    }
+
+    &__item-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+
+        svg, path {
+            transition: .2s;
+        }
+    }
+
+    &__item-content {
+        display: none;
+        font-weight: 300;
+        padding: 15px 10px;
+        padding-top: 0;
+
+        p:first-child {
+            margin-top: 0;
+        }
+    }
+}
