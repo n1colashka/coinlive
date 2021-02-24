@@ -1,0 +1,212 @@
+.review {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__text {
+        p {
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+
+    &__title {
+        font-size: 21px;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-bottom: 23px;
+    }
+
+    &__higlight {
+        font-weight: 600;
+        font-style: italic;
+        color: #eb0029;
+
+        b {
+            color: #000;
+        }
+    }
+
+    &__list {
+
+        li {
+            position: relative;
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 30px;
+                height: 30px;
+                background: url('../images/dist/list-circle.svg') center no-repeat;
+            }
+        }
+    }
+
+    &__coupon-wrapper {
+        margin-bottom: 35px;
+        .review__title {
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    &__banner {
+        margin: 40px 0;
+        background-color: #6c87f0;
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-align: center;
+        padding: 35px;
+    }
+
+    &__banner-title {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+
+    &__banner-subtitle {
+        margin-bottom: 20px;
+        font-weight: 300;
+        opacity: .6;
+    }
+
+    &__btn {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    &__img {
+        margin-top: 35px;
+        margin-bottom: 40px;
+    }
+}
+.coupon {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    padding-bottom: 35px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 14px 14px 0;
+        border-color: transparent #6c87f0 transparent transparent;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 14px 14px;
+        border-color: transparent transparent #6c87f0 transparent;
+    }
+    
+    &__left {
+        max-width: 350px;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    &__rating-caption {
+        display: flex;
+        align-items: center;
+        span {
+            opacity: 0.7;
+        }
+        b {
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    }
+
+    &__rating-list {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        li + li {
+            margin-left: 3px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 30px;
+        color: #333333;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 1.2;
+        color: rgba(#333333, .6);
+        margin-bottom: 15px;
+    }
+
+    &__btn {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        padding: 13px;
+        max-width: 250px;
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 15px;
+        line-height: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+        background-color: #6c87f0;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        color: #fff;
+        padding-right: 40px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            right: 30px;
+            top: 0;
+            height: 45px;
+            width: 17px;
+            background: url('../images/dist/coupon-bg.png') center no-repeat;
+        }
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 18px;
+        span {
+            opacity: .6;
+        }
+        img {
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+    }
+
+    &__right {
+        margin-left: 30px;
+    }
+}

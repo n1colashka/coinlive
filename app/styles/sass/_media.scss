@@ -4,6 +4,12 @@
    .header__navigation > ul > li > a:hover {
       color: #fec70d;
    }
+   .footer__list li:hover {
+      color: #fec70d;
+   }
+   .footer__bottom-list li:hover {
+      color: #fec70d;
+   }
 
    .header__navigation li {
       &:hover {
@@ -29,6 +35,21 @@
 
 
 @media (max-width: 1024px) {
+   .coupon__right {
+      margin-left: 0;
+   }
+   .aside {
+      width: 35%;
+      &__list {
+         margin-bottom: 0;
+      }
+      &__currency {
+         padding-right: 0;
+      }
+      &__currency-price b {
+         margin-bottom: 0;
+      }
+   }
    .footer {
       &__bottom-list {
          display: none;
@@ -172,6 +193,23 @@
 }
 
 @media (max-width: 750px) {
+   .review-hero {
+      &__rating {
+         margin-bottom: 30px;
+      }
+      &__inner {
+         padding-bottom: 65px;
+      }
+      &__title {
+         font-size: 38px;
+      }
+      &__logo {
+         flex-wrap: wrap;
+         img {
+            width: 280px;
+         }
+      }
+   }
    .footer {
       &__top {
          padding: 15px 0;
@@ -360,7 +398,7 @@
       &__navigation {
          position: absolute;
          left: 0;
-         top: -15px;
+         top: 0;
          overflow: auto;
          z-index: 15;
          width: 100%;
@@ -478,7 +516,60 @@
    }
 }
 
+@media (max-width: 700px) {
+   .aside {
+      display: none;
+   }
+   .coupon {
+      padding: 12px;
+      padding-bottom: 30px;
+      margin-top: 20px;
+
+      &::before,
+      &::after {
+         display: none;
+      }
+   }
+   .review {
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+      &__banner {
+         margin: 20px 0;
+         padding: 35px 17px;
+      }
+      &__banner-title {
+         font-size: 20px;
+         line-height: 30px;
+      }
+      &__banner-subtitle {
+         font-size: 14px;
+         line-height: 1.2;
+      }
+
+      &__title {
+         font-size: 18px;
+         line-height: 1;
+         margin-bottom: 10px;
+         margin-top: 20px;
+      }
+
+      &__text {
+         font-size: 13px;
+         line-height: 20px;
+      }
+   }
+}
+
 @media (max-width: 550px) {
+   .review-hero {
+      &__logo {
+         flex-direction: column;
+      }
+      &__title {
+         margin-left: 70px;
+      }
+   }
    .about {
       &__item {
          width: 76px;

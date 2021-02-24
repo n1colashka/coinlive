@@ -54,7 +54,7 @@ html {
 }
 
 html, body { 
-	overflow-x: hidden;
+	// overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -181,3 +181,11 @@ a {
     transform: rotate(180deg);
     right: 110px;
 }
+
+.page-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+

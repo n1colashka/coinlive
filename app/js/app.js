@@ -62,6 +62,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function initHeroReviewSlider() {
+        if (document.querySelector('.review-hero__slider')) {
+            var swiper = new Swiper('.review-hero__slider', {
+                spaceBetween: 60,
+                slidesPerView: 'auto',
+                breakpoints: {
+                    320: {
+                        spaceBetween: 40,
+                        initialSlide: 1,
+                        centeredSlides: true,
+                    },
+                    750: {
+                        spaceBetween: 60,
+                        centeredSlides: false,
+                    },
+                }
+            });
+        }
+    }
+
     function changeHeader() {
         const header = document.querySelector('.header');
 
@@ -73,6 +93,32 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
 
+    }
+
+    function initCircleRating() {
+        const circleRatings = document.querySelectorAll('.rating__circle-wrapper');
+
+        if (circleRatings.length > 0) {
+            circleRatings.forEach(rating => {
+                const circle = rating.querySelector('.rating__circle');
+        
+                const value = rating.querySelector('.rating__value');
+                const valueFrom = rating.querySelector('.rating__from');
+                const valueTo = rating.querySelector('.rating__to');
+                const radius = circle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
+                
+                circle.style.strokeDasharray = `${circumference} ${circumference}`;
+                circle.style.strokeDashoffset = circumference;
+                setProgress(value);
+    
+                function setProgress(value) {
+                    let percent = (valueFrom.textContent * 100) / valueTo.textContent;
+                    const offset = circumference - percent / 100 * circumference;
+                    circle.style.strokeDashoffset = offset;
+                }
+            })
+        }
     }
 
     function showCreditsItems() {
@@ -106,6 +152,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 $(this).parent('.answers__item').toggleClass('active');
             })
         }
+    }
+
+    function initRatingBars() {
+        const bars = document.querySelectorAll('.rating__bar');
+
+        bars.forEach(bar => {
+            const value = bar.querySelector('.rating__bar-value span');
+            const barFill = bar.querySelector('.rating__bar-fill');
+            barFill.style.width = value.textContent * 100 / 5 + '%';
+        })
     }
 
     function initDynamicAdapt() {
@@ -266,10 +322,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initMenu();
     initClientsSlider();
+    initHeroReviewSlider();
     changeHeader();
     showCreditsItems();
     showMore();
     initAnswersAccordion();
     initMenu750();
     initDynamicAdapt();
+    initCircleRating();
+    initRatingBars();
 })
