@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 breakpoints: {
                     320: {
                         spaceBetween: 40,
-                        initialSlide: 1,
+                        initialSlide: 2,
                         centeredSlides: true,
                     },
                     750: {
@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showMore() {
-        if ($('.about__btn').length > 0) {
-            $('.about__btn').on('click', function(e){
+        if ($('.more__btn').length > 0) {
+            $('.more__btn').on('click', function(e){
                 e.preventDefault();
-                $('.about__btn').hide(500);
-                $('.about__text').addClass('open');
+                $('.more__btn').hide(500);
+                $('.more__text').addClass('open');
             })
         }
     }

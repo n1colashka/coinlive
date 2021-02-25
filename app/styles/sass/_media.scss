@@ -35,6 +35,34 @@
 
 
 @media (max-width: 1024px) {
+   .trade {
+      &__bg {
+         display: none;
+      }
+      &__content {
+         padding: 20px 10px;
+      }
+      
+   }
+   .trade-info {
+      padding: 45px 0;
+   }
+   .trade-foot {
+      padding-top: 40px;
+      padding-bottom: 0;
+      &__item {
+         max-width: calc(50% - 20px);
+         &:nth-child(2) ~ .trade-foot__item {
+            display: none;
+         }
+      }
+   }
+   .trade-hero {
+      padding-top: 140px;
+      &__inner {
+         padding-bottom: 65px;
+      }
+   }
    .coupon__right {
       margin-left: 0;
    }
@@ -193,6 +221,19 @@
 }
 
 @media (max-width: 750px) {
+   .trade-hero {
+      padding-top: 130px;
+      &__title {
+         font-size: 24px;
+      }
+      &__inner {
+         padding-bottom: 45px;
+      }
+      &__text {
+         font-size: 13px;
+         line-height: 1.2;
+      }
+   }
    .review-hero {
       &__rating {
          margin-bottom: 30px;
@@ -517,6 +558,64 @@
 }
 
 @media (max-width: 700px) {
+   .trade-info {
+      padding-bottom: 35px;
+      &__title {
+         font-size: 20px;
+         line-height: 25px;
+      }
+      &__text {
+         max-height: 189px;
+      }
+   }
+   .trade-foot {
+      margin-bottom: -15px;
+      &__list {
+         margin-left: 0;
+         margin-right: 0;
+      }
+      &__left {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         & > img {
+            padding-left: 10px;
+         }
+      }
+      &__item {
+         max-width: 100%;
+         margin: 0;
+         &:nth-child(1) ~ .trade-foot__item {
+            display: none;
+         }
+      }
+   }
+   .trade {
+      padding-top: 45px;
+      &__list {
+         flex-direction: column;
+      }
+      &__content {
+         padding-bottom: 25px;
+      }
+      &__item-list {
+         margin-bottom: 20px;
+
+         li {
+            font-size: 13px;
+            padding-top: 0;
+            padding-left: 35px;
+            &::before {
+               background-size: cover;
+               width: 25px;
+               height: 25px;
+            }
+         }
+      }
+      &__inner {
+         padding-bottom: 30px;
+      }
+   }
    .aside {
       display: none;
    }
@@ -617,6 +716,18 @@
 }
 
 @media (max-width: 440px) {
+   .trade {
+      &__buttons {
+         flex-direction: column;
+      }
+      &__btn {
+         width: 100%;
+         margin-bottom: 10px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
    .clients__swiper-elems {
       width: 100%;
       justify-content: space-around;
