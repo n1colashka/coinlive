@@ -1,0 +1,68 @@
+.seo-hero {
+    padding-top: 200px;
+    padding-bottom: 110px;
+    font-family: 'Open Sans', sans-serif;
+    background: url('../images/dist/bg-el-2.png') top left no-repeat;
+
+    .container {
+        position: relative;
+    }
+
+    &__bg {
+        display: flex;
+        position: absolute;
+        left: 80px;
+        bottom: -190px;
+        z-index: -1;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 65px;
+        margin: 10px 0;
+        color: #111111;
+        span {
+            font-size: 55px;
+            display: inline-block;
+            font-weight: 800;
+            color: #fc7478;
+        }
+    }
+
+    &__bg-title {
+        line-height: 1;
+        font-size: 250px;
+        font-weight: 700;
+        color: #f6fbff;
+    }
+
+    &__bg-title--2 {
+        font-size: 210px;
+        margin-top: 80px;
+        margin-left: 80px;
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        max-width: 750px;
+    }
+
+    &__subtitle {
+        font-size: 25px;
+        line-height: 1.1;
+        color: #111111;
+    }
+
+    &__img {
+        margin-left: 30px;
+
+        img {
+            max-width: 350px;
+        }
+    }
+}

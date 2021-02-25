@@ -35,6 +35,25 @@
 
 
 @media (max-width: 1024px) {
+   .seo-hero {
+      background-position: top -173px left -379px;
+      padding-top: 140px;
+      padding-bottom: 90px;
+      &__bg {
+         left: 10px;
+         bottom: -165px;
+      }
+      &__bg-title {
+         font-size: 185px;
+         &--2 {
+            font-size: 155px;
+            margin-top: 50px;
+         }
+      }
+      &__img {
+         display: none;
+      }
+   }
    .trade {
       &__bg {
          display: none;
@@ -221,6 +240,37 @@
 }
 
 @media (max-width: 750px) {
+   .seo-hero {
+      padding-bottom: 70px;
+      &__subtitle {
+         font-size: 15px;
+      }
+      &__bg {
+         display: block;
+         bottom: -175px;
+         width: 100%;
+      }
+      &__bg-title {
+         display: block;
+         font-size: 94px;
+         line-height: 1;
+         &--2 {
+            font-size: 78px;
+            margin-top: 0;
+            margin-left: auto;
+            text-align: right;
+         }
+      }
+      &__title {
+         font-size: 16px;
+         line-height: 35px;
+         span {
+            display: block;
+            font-size: 26px;
+            line-height: 35px;
+         }
+      }
+   }
    .trade-hero {
       padding-top: 130px;
       &__title {
@@ -482,6 +532,14 @@
       }
    }
 
+   .subtitle {
+      font-size: 12px;
+   }
+
+   .title {
+      font-size: 19px;
+   }
+   
    .credits {
       padding-bottom: 50px;
       padding-top: 40px;
@@ -492,6 +550,7 @@
       }
       &__title {
          margin-bottom: 25px;
+         font-size: 18px;
       }
       &__calculator-title {
          margin-bottom: 20px;
@@ -503,13 +562,7 @@
       }
    }
 
-   .subtitle {
-      font-size: 12px;
-   }
 
-   .title {
-      font-size: 19px;
-   }
    
    .hero {
       padding-top: 140px;
