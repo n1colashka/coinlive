@@ -172,6 +172,12 @@
    }
    .credits {
       background: none;
+
+      &__cryptos {
+         li:nth-child(6) ~ li {
+            display: none;
+         }
+      }
       &__item {
          padding-left: 10px;
       }
@@ -247,8 +253,8 @@
       }
       &__bg {
          display: block;
+         right: 10px;   
          bottom: -175px;
-         width: 100%;
       }
       &__bg-title {
          display: block;
@@ -608,6 +614,11 @@
    .menu .menu__list>a {
       display: inline-block;
    }
+   .credits {
+      &__col--main {
+         margin-left: 0;
+      }
+   }
 }
 
 @media (max-width: 700px) {
@@ -714,6 +725,7 @@
 }
 
 @media (max-width: 550px) {
+   
    .review-hero {
       &__logo {
          flex-direction: column;
@@ -764,6 +776,16 @@
       }
       &__calculator-title {
          margin-bottom: 15px;
+      }
+   }
+   .credits {
+      .credits__col--main {
+         width: 100%;
+      }
+   }
+   .staking-page {
+      .credits__col:nth-child(4) {
+         max-width: 100%;
       }
    }
 }

@@ -1,0 +1,26 @@
+.staking-hero {
+    background: url('../images/dist/staking-bg.png') center / cover no-repeat;
+    padding-top: 200px;
+    padding-bottom: 110px;
+
+    &__content {
+        max-width: 550px;
+        color: #fff;
+    }
+
+    &__subtitle {
+        opacity: 0.6;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 1.2;
+        opacity: 0.6;
+    }
+}
