@@ -1,0 +1,69 @@
+.mission {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background: url('../images/dist/bg-el-2.png') left top no-repeat,
+                url('../images/dist/bg-el-3.png') bottom  right -365px no-repeat;
+    color: #111111;
+
+    &__inner {
+        display: flex;
+        
+    }
+
+    &__content {
+        max-width: 580px;
+    }
+
+    &__text {
+        position: relative;
+        height: 290px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        opacity: .8;
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            height: 200px;
+            width: 100%;
+            left: 0;
+            background: linear-gradient(180deg, rgba(9,9,121,0) 0%, #fff 100%);
+        }
+
+        &.open {
+            height: auto;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__btn-wrapper {
+        text-align: center;
+    }
+
+    &__btn {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        padding-bottom: 3px;
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+
+    &__img {
+        margin-left: 20px;
+    }
+}
+
