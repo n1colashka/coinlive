@@ -1,5 +1,16 @@
 @media (min-width: 1025px) {
    // Hover section
+   .btn {
+      transition: .3s ease;
+      &:hover {
+         background-color: #ffd033;
+         color: #fff;
+      }
+      &--yellow:hover {
+         background-color: #ffd033;
+         color: #000;
+      }
+   }
 
    .header__navigation > ul > li > a:hover {
       color: #fec70d;
@@ -31,6 +42,12 @@
 
    }
    // Hover section
+}
+
+@media (max-width: 1200px) {
+   .answers__content {
+      margin-top: 0;
+   }
 }
 
 
