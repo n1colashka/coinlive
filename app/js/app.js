@@ -319,6 +319,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const da = new DynamicAdapt("max");
         da.init();
     }
+
+    function initAos() {
+        AOS.init({
+            duration: 700
+        });
+    }
     
     initMenu();
     initClientsSlider();
@@ -331,4 +337,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initDynamicAdapt();
     initCircleRating();
     initRatingBars();
+    initAos();
 })
