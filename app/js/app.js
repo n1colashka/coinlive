@@ -136,11 +136,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showMore() {
+        let isOpen = false;
         if ($('.more__btn').length > 0) {
             $('.more__btn').on('click', function(e){
+                isOpen = !isOpen;
                 e.preventDefault();
-                $('.more__btn').hide(500);
-                $('.more__text').addClass('open');
+                $('.more__text').toggleClass('open');
+                if (isOpen) $('.more__btn').text('Показать меньше');
+                else $('.more__btn').text('Читать полностью');
             })
         }
     }
