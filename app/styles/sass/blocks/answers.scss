@@ -33,6 +33,10 @@
         &:last-child {
             margin-bottom: 0;
         }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
 
         &.active {
             .answers__item-title svg {
@@ -70,7 +74,7 @@
         font-weight: 300;
         padding: 15px 10px;
         padding-top: 0;
-        padding-bottom: 5px;
+        padding-bottom: 20px;
 
         p:first-child {
             margin-top: 0;
